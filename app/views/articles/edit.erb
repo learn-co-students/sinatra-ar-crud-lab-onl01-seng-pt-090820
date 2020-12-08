@@ -1,7 +1,7 @@
 <h1>Update an Article</h1>
 <form action="/articles/<%=@article.id%>" method="POST">
     <input id="hidden" type="hidden" name="_method" value="PATCH">
-    <h2>Title: <textarea id="article_title" type="textarea" name="title"><%=@article.title%></textarea></h2>
-    <h2>Content: <textarea id="article_content" type="textarea" name="content"><%=@article.content%></textarea></h2>
+    <h2>Title: <textarea id="title" type="textarea" name="article[title]"><%=@article.title%></textarea></h2>
+    <h2>Content: <textarea id="content" type="textarea" name="article[content]"><%=@article.content%></textarea></h2>
     <input id="submit" type="submit" value="Update">
 </form>

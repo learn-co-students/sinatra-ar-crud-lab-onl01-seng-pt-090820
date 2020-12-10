@@ -1,6 +1,10 @@
+<div style="text-align: center">
 <h1><%= @article.title%></h1>
 <h2><%= @article.content%></h2>
 <form method="post" action="/articles/<%=@article.id%>">
     <input id="hidden" type="hidden" name="_method" value="DELETE">
     <input type="submit" value="delete">
+    <a href="/articles"><h2>Full List</h2></a>
+    <a href="/articles/<%=@article.id%>/edit"><h2>Edit This Article</h2></a>
 </form>
+</div>

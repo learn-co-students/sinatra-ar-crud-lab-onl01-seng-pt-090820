@@ -1,0 +1,13 @@
+<h2> <%=@article.title%></h2>
+<%# displays title of coresponding article id inputed  %>
+<p> <%=@article.content%></p>
+<%# and its contents  %>
+
+<br>
+<form method="post" action="/articles/<%=@article.id%>">
+<%# Read part; sends POST request on /articles/(articles id) %>
+
+Delete Article?<br>
+<input type="hidden" id="hidden" name="_method" value="Delete">
+<input type="submit" value="Delete">
+</form>

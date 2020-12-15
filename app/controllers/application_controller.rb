@@ -41,13 +41,13 @@ class ApplicationController < Sinatra::Base
   #PATCH
   patch "/articles/:id" do
     @article = Article.find(params[:id])
-    @article.update(params[:article])
+    @article.update(params)
     redirect to "/articles/#{@article.id}"
   end
 
   #DELETE
   delete "/articles/:id" do
-    @article = Article.find_by(id: params[:id])
+    @article = Article.find(params[:id])
     @article.destroy
     redirect to "/articles"
   end

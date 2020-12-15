@@ -1,0 +1,10 @@
+<h1>Articles</h1>
+<%# ^ here we iterate the @article variable that we declared on the controller.
+which is set to Article.all %>
+
+<ol>
+<% @articles.each do |article| %>
+    <li><%= "#{article.title}"%></li>
+    <%end %>
+    <%# li means list btw %>
+</ol>

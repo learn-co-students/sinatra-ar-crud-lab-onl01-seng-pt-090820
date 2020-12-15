@@ -1,0 +1,16 @@
+<h1>Edit Dizz..</h1>
+<h2> <%=@article.title%></h2>
+<p> <%=@article.content%></p>
+
+<form method="POST" action="/articles/<%=@article.id%>">
+    <input id="hidden" type="hidden" name="_method" value="PATCH">  
+    Edit Title:
+    <br>
+    <input type="text" name="title" id="title">
+    <br>
+    Edit Content:
+    <br>
+    <textarea name="content" id="content" rows="6" cols="60"></textarea>
+        <br><br>
+    <input type="submit" id="submit">
+</form>

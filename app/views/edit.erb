@@ -1,0 +1,7 @@
+
+<form method="POST" action="/articles">
+  <input type="hidden" value="PATCH" name="_method">
+  Title:<input type="text" name="title" value="<%= @article.title %>"><br>
+  Content:<input type="text" name="content" value="<%= @article.content %>"><br>
+  <input type="submit" value="Edit">
+</form>

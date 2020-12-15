@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
 
   #create
   get '/articles/new' do
-    article = Article.create(params)
+    article = Article.new(params)
     erb :new
   end
 
@@ -28,8 +28,8 @@ class ApplicationController < Sinatra::Base
 
   #POST
   post '/articles' do 
-    @article = Article.new(title: params[:title], content: params[:content])
-    redirect to '/articles/:id'
+    @article = Article.create(title: params[:title], content: params[:content])
+    redirect to '/articles/#{@article.id}'
   end
 
   #UPDATE
